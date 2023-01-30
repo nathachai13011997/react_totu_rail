@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react'
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button } from "react-bootstrap";
+
 
 function UseEffectDamo1() {
     const [count, setCount] = useState(0)
@@ -12,7 +15,7 @@ function UseEffectDamo1() {
     return <>
         <div>
             <h1>{count}</h1>
-            <button onClick={() => { setCount(count + 1) }}>Add</button>
+            <Button onClick={() => { setCount(count + 1) }}>Add</Button>
         </div>
     </>
 }

@@ -6,6 +6,7 @@ const UseEffectDamo4 = () => {
 
     // feedJSON
     useEffect(() => {
+        console.log("test");
         axios.get('http://jsonplaceholder.typicode.com/posts').then(result => {
             const { data } = result // ให้มันมีเฉพาะ Data
             // console.log(data);

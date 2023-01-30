@@ -24,3 +24,19 @@ nav {
   background: #333;
 } */
 
+
+
+.main-nav:hover {
+  color:rgba(255, 255, 255, 0.685);
+}
+
+.main-nav {
+  padding-right: .5rem;
+  padding-left: .5rem;
+  color:rgba(255,255,255,.55);
+  text-decoration:none;
+}
+
+.active {
+  color:#fff !important
+}

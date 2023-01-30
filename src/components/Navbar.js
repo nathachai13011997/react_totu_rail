@@ -1,32 +1,35 @@
 import React, { useState } from 'react'
-import NavItems from './NavItems'
-
-const Navbar = () => {
-    const [NavItemAction, setNavItemAction] = useState('');
-
-    const activeitem = (item) => {
-        if (NavItemAction.length > 0) {
-            document.getElementById(NavItemAction).classList.remove('action')
-        }
-        setNavItemAction(item, () => {
-            document.getElementById(NavItemAction).classList.props('action')
-        })
-    }
-
-    
-    return <>
-        <nav>
-            <ul>
-                <NavItems item="ReactTotuRail" tolink='/ReactTotuRail' activenav={activeitem}></NavItems>
-                <NavItems item="ReacHook" tolink='/ReacHook' activenav={activeitem}></NavItems>
-                <NavItems item="UseEffectDamo1" tolink='/UseEffectDamo1' activenav={activeitem}></NavItems>
-                <NavItems item="UseEffectDamo2" tolink='/UseEffectDamo2' activenav={activeitem}></NavItems>
-                <NavItems item="UseEffectDamo3" tolink='/UseEffectDamo3' activenav={activeitem}></NavItems>
-                <NavItems item="UseEffectDamo4" tolink='/UseEffectDamo4' activenav={activeitem}></NavItems>
-                <NavItems item="UserContextDamo1" tolink='/UserContextDamo1' activenav={activeitem}></NavItems>
-            </ul>
-        </nav>
-    </>
+import NavbarItem from "./NavbarItem";
+import { Container, Nav, Navbar } from "react-bootstrap";
+function Navbar2() {
+    // const [NavItemAction, setNavItemAction] = useState('');
+    // const activeitem = (item) => {
+    //     // if (NavItemAction.length > 0) {
+    //     //     document.getElementById(NavItemAction).classList.remove('action')
+    //     // }
+    //     console.log("item",document.getElementById(item));
+    //     // document.getElementById(item)
+    //     // setNavItemAction(item, () => {
+    //     //     document.getElementById(NavItemAction).classList.props('action')
+    //     // })
+    // }
+    return (
+        <Navbar bg="primary" variant="dark">
+              <Container>
+                <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+                <Nav className="me-auto">
+                    <NavbarItem  to="/ReactTotuRail" value="ReactTotuRail"/>
+                    <NavbarItem  to="/ReacHook" value="ReacHook" />
+                    <NavbarItem  to="/UseEffectDamo1" value="UseEffectDamo1" />
+                    <NavbarItem  to="/UseEffectDamo2" value="UseEffectDamo2" />
+                    <NavbarItem  to="/UseEffectDamo3" value="UseEffectDamo3" />
+                    <NavbarItem  to="/UseEffectDamo4" value="UseEffectDamo4" />
+                    <NavbarItem  to="/UserContextDamo1" value="UserContextDamo1" />
+                </Nav>
+              </Container>
+        </Navbar>
+       
+    )
 }
 
-export default Navbar
+export default Navbar2

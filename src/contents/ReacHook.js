@@ -13,7 +13,7 @@ const ReacHook = () => {
         }
 
         fetchData()
-    })
+    },[])
 
     return <>
         <div>
